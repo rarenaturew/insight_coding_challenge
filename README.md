@@ -4,7 +4,7 @@ Insight - Coding Challenge
 #### Author : Daoyan Wang
 
 The description of the problem can be find [here](https://github.com/InsightDataScience/cc-example)
-at the github of the "Insight Data Science", or [here](https://github.com/rarenaturew/insight_coding_challenge/Insight_instruction.md).
+at the github of the "Insight Data Science", or [here](https://github.com/rarenaturew/insight_coding_challenge/blob/master/Insight_instruction.md).
 
 ### Functionality of the package
 The purpose of this package is to help analyzing the community of Twitter users. 
