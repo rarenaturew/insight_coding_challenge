@@ -52,7 +52,7 @@ size is **greater than** the RAM of my machine.
 The test was performed under Mac OS X Yosemite on MacBook Air (13-inch, Mid 2013)
 with processors (1.3 GHz Intel Core i5) and RAM (4 GB 1600 MHz DDR3).
 
-<img src="images/W_C.png" width="425">   <img src="images/R_M.png" width="425">
+<img src="images/W_C.png" width="350">   <img src="images/R_M.png" width="350">
 
 ### The details of the implementation
 
