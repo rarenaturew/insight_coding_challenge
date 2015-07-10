@@ -3,7 +3,7 @@ Insight - Coding Challenge
 
 #### Author : Daoyan Wang
 
-The description of the problem can be find [here](https://github.com/InsightDataScience/cc-example)
+The description of the problem can be found [here](https://github.com/InsightDataScience/cc-example)
 at the github of the "Insight Data Science", or [here](https://github.com/rarenaturew/insight_coding_challenge/blob/master/Insight_instruction.md).
 
 ### Functionality of the package
@@ -13,7 +13,7 @@ and anything seperated by white space are regarded as words. This package includ
 two programs performing the following two tasks:
 
 1. **word_tweeted.py** : calculate the total number of times each word has been tweeted.
-2. **median_tweeted.py** : calculate the median number of unique words in each tweet, and update this median as tweets come in. 
+2. **median_unique.py** : calculate the median number of unique words in each tweet, and update this median as tweets come in. 
 
 The first program produces file **ft1.txt** which includes the following total count for each word:
 
@@ -30,12 +30,11 @@ The second program produces file **ft2.txt** which includes running median numbe
 	14
 
 ### Usage: run.sh \<option\>                                                    
-Your computer should have **Python 2.7** installed.
+Your computer should have **Python 2.7** installed. The programs can be executed by simply "run.sh \<option\>", here the \<option\> is optional. 
 
-         The default situation is "no option": no data munging. We can simply run "run.sh"             
+         The default option is "no option": no data munging. We can simply run "run.sh"             
                                                                              
-         If <option> is not empty: the program will convert capital letters  
-                                   into lower cases, and ignore empty lines. 
+         If <option> is not empty: capital letters are converted into lower cases, and empty lines are ignored. 
                                    Try: " run.sh 1 "                         
 
 When the option is not empty, the output files are named **ft1_\<option\>.txt** and 
@@ -86,8 +85,9 @@ the words and their counts. The structure of the dictionary is:
 
 When processing the lines, we locate each word in this dictionary and 
 increase its count. This operation, as stated above, is independent 
-of N_w. After we loop over the file, we do sorting the dictionary
-key alphabetically. 
+of N_w. After we loop over the file, we sort the dictionary
+keys alphabetically, and then simply write the dictionary to file *ft1.txt*
+according to the order of the sorted keys. 
 
 
 #### Running median
@@ -95,15 +95,15 @@ First of all, please note the number of distinct words in a given tweet
 has an upper limit (denoted by **N_t**), due to the restriction of the
 length of a tweet. Currently *twitter* do not allow the length exceed 160 characters,
 therefore the maximal value of N_t is only 80. Actually we do not care about
-the specific value of N_t. Instead, what's important is that there is 
-an **fixed** upper limit of N_t. Therefore any operation that is solely 
+the specific value of N_t. Instead, what's important is that there **exists** 
+this upper limit of N_t. Therefore any operation that is solely 
 determined by N_t, has nothing to do with N_L (the number of total lines
 that is needed to be processed), which is therefore O(1).
 
-To realize the O(1) dependence of the running median, we use a dictionary
-to keep the possible values of the number of unique words, and their counts.
+To realize the O(1) dependence of the running median calculation, we use a dictionary
+to keep the possible values of the number of unique words in a tweet, and their counts.
 For example, if there are 7 tweets which numbers of unique words are: 
-3,2,4,4,3,4,3 the dictionary is then 
+3,2,4,4,3,4,3,  the dictionary is then 
 
         dict = {3:3,2:1,4:3}
 We then sort the keys of the dictionary. From the dictionary and the sorted keys, 
@@ -148,11 +148,15 @@ Note, when calculating the running median, the only objects we need are:
 the dictionary (*dict*), its sorted keys (*sorted_keys*), 
 and the total number of lines (*N_lines*). 
 The time spent to calculate the running median only depend on N_t, which
-is a **fixed** amount. Here the *sorted_keys* is optional, because it can be
+is a **fixed** amount, therefore O(1). Here the *sorted_keys* is optional, because it can be
 obtained from *dict*. However, maintaining a sorted key vector *sorted_keys* 
 can save time. Instead of sorting the keys of *dict* each time when a new tweet comes in,
 we now only update *sorted_keys* if the "number of unique words" of the new tweet
 is not already in the keys of *dict*, otherwise the *sorted_keys* remains the same.
-Note there are only N_t possible keys, therefore we only do sorting at most N_t times.
+Note there are only 0.5\*N_t possible keys, therefore we only do sorting at most 0.5\*N_t times,
+which make the sorting time essentially negligible. 
 
-
+### Summary
+This package can deal with large files whose sizes are larger than the RAM of the machine, 
+and the time complexity is O(N): the duration of the execution time is 
+proportional to the size of the input data file. 

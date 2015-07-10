@@ -18,7 +18,7 @@ cat<<END2
 *                                  DONE !                                     *
 *                                                                             *
 *                                                                             *
-*                            MORE OPTIONS!!!!                                 *
+*                       MORE OPTIONS ARE POSSIBLE:                            *
 *                                                                             *
 *  Functionality:                                                             *
 *  Taking ./tweet_input/tweets.txt as the input file, to perform the counts   *

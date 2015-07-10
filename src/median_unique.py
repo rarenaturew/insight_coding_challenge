@@ -64,13 +64,13 @@ def value_at(position,num_count_dict,sorted_keys):
   if len(num_count_dict) == 0:
     return 0.0 
   p = 0 # to accumulate the number of counts from smallest num_of_unique_words in the ordered sequence
-  for k in sorted_keys:
+  for k in sorted_keys: # note: the keys of the dictionary are sorted 
     p = p + num_count_dict[k]
     if (p >= position) : # found it!!!! 
       the_value = k # this is the value at 'position' of the ordered sequence 
       break
   if p < position: #If this happens after the "for" loop, "position" is too large: out of the dictionary
-      print "ERROR: position is out of range of the dictionary (position > N_lines)"
+      print "ERROR: position is out of the range of the dictionary (position > N_lines)"
       sys.exit(1)
   return the_value
 
