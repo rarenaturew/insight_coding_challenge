@@ -85,8 +85,8 @@ def value_at(position,num_count_dict,sorted_keys):
             the_value = k # this is the value at 'position' of the ordered sequence 
             break
     if p < position: #If this happens after the "for" loop, "position" is too large: out of the dictionary
-          print "ERROR: position is out of the range of the dictionary (position > N_lines)"
-          sys.exit(1)
+        print "ERROR: position is out of the range of the dictionary (position > N_lines)"
+        sys.exit(1)
     return the_value
 
 
