@@ -1,3 +1,17 @@
+'''
+This program is to calculate the running median of "number of unique words in a tweet". 
+As new tweet comes in, the median need to be updated. 
+
+The basic structure is to use a dictionary (num_count_dict) to hold {num_of_unique_words:count}.
+The running median can then be calculated from this dictionary. 
+The time complexity of the calculation of the median from the dictionary, is O(1), 
+and the input file is read and processed line by line, 
+therefore, the program is scalable: the duration of the execution is proportional to the size of the input file.
+
+Author: Daoyan Wang
+July 2015
+'''
+
 import sys
 
 def num_count(in_file, out_file,option):

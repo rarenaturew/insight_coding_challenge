@@ -1,3 +1,16 @@
+'''
+This program is to obtain the counts of distinct words in a given input file, 
+and output the result to a file according to the order of ascii values of the words.
+ 
+The basic structure is to use a dictionary (word_count_dict) to hold {word:count}.
+The time complexity of locating a key in a dictionary is O(1) (on average), 
+and the input file is read and processed line by line, 
+therefore, the program is scalable: the duration of the execution is proportional to the size of the input file.
+
+Author: Daoyan Wang
+July 2015
+'''
+
 import sys
 
 def word_count(in_file,option):
