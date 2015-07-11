@@ -2,7 +2,7 @@ import sys
 
 def word_count(in_file,option):
   """Returns a word/count dictionary for this in_file."""
-  # word_count_dict is the word/count dictionary. 
+  # word_count_dict is the word:count dictionary. 
   word_count_dict = {}  # Map each word to its count
   input_file = open(in_file, 'r')
   for line in input_file:

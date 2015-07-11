@@ -4,7 +4,7 @@ def num_count(in_file, out_file,option):
   """ find the running median of the number of unique words in tweets. """
   """ option == 0 : no data munging; 
       option != 0 : convert letters to lower cases, and ignore empty lines. """
-  # num_count_dict is a num_of_unique_words/count dictionary.
+  # num_count_dict is a num_of_unique_words:count dictionary.
   # This dictionary  map each possible num_of_unique_words with its count in the in_file.
   # The important point is that this dictionary corresponds to an ordered sequence from which
   # we calculate the median. For example, num_count_dict = {3:2, 4:3, 2:4} corresponds to

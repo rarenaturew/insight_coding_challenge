@@ -4,7 +4,8 @@ if [ $# -eq 0 ] ; then
   python ./src/words_tweeted.py ./tweet_input/tweets.txt ./tweet_output/ft1.txt 
   python ./src/median_unique.py ./tweet_input/tweets.txt ./tweet_output/ft2.txt 
 else
-  echo "Performing the option with data munging........ "
+  echo "  "
+  echo "       Performing the option with data munging........ "
   python ./src/words_tweeted.py ./tweet_input/tweets.txt ./tweet_output/ft1_$1.txt  1 
   python ./src/median_unique.py ./tweet_input/tweets.txt ./tweet_output/ft2_$1.txt  1
 fi

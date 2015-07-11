@@ -54,7 +54,7 @@ with processors (1.3 GHz Intel Core i5) and RAM (4 GB 1600 MHz DDR3).
 
 <img src="images/W_C.png" width="350">   <img src="images/R_M.png" width="350">
 
-### The details of the implementation
+### The details of the implementation 
 
 The key feature of the programs is the scalability. 
 To make it possible, the main operations should be scalable. 
