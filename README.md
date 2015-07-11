@@ -118,7 +118,7 @@ and the median is now calculated as
 
         median = (3+4)/2 = 3.5
 In general, the running median is calculated as follows. Given an ordered 
-sequence of numbers whose length is *N_lines*, the median is 
+sequence of numbers whose length is **N_lines**, the median is 
 either the value at *position*=*(N_lines+1)/2* (if *N_lines* is odd) or the average 
 of the value at *position*=*N_lines/2* and the value at *position*=*N_lines/2 + 1* 
 (if *N_lines* is even). Therefore this problem can be considered solved if
