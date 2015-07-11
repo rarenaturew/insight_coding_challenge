@@ -29,6 +29,9 @@ The second program produces file **ft2.txt** which includes running median numbe
 	12.5
 	14
 
+In general, because the median is for a sequence of integers,
+the median is either still an integer, or an integer + 0.5.
+
 ### Usage: run.sh \<option\>                                                    
 Your computer should have **Python 2.7** installed. The programs can be executed by simply "run.sh \<option\>", here the \<option\> is optional. 
 
