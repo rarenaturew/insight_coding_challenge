@@ -86,9 +86,9 @@ def main():
       option = 1 
     num_count(in_file, out_file,option)
   else:
-    print 'usage: median_tweeted.py input_file output_file <option>'
-    print '       default option or option = 0: no data munging'
-    print '       option != 0: convert to lower cases, and ignore empty lines'
+    print 'usage: median_unique.py input_file output_file <option>'
+    print '       default option is no option: no data munging'
+    print '       if option is not empty: convert to lower cases, and ignore empty lines'
     sys.exit(1)
 
 

@@ -44,8 +44,8 @@ def main():
     print_words(in_file, out_file, option)
   else:
     print 'usage: word_tweeted.py input_file output_file <option>'
-    print '       default option or option = 0: no data munging'
-    print '       option != 0: convert to lower cases'
+    print '       default option is no option: no data munging'
+    print '       if option is not empty: convert to lower cases'
     sys.exit(1)
 
 
