@@ -34,7 +34,8 @@ def num_count(in_file, out_file,option):
     else:
       num_count_dict[num_of_unique_words] = num_count_dict[num_of_unique_words] + 1
     running_median = get_median(num_count_dict, sorted_keys, N_lines)
-    output_file.write(str(running_median)+'\n')
+    #output_file.write(str(running_median)+'\n')
+    output_file.write("%.2f\n" % running_median)
   input_file.close() 
   output_file.close()
 
