@@ -34,7 +34,8 @@ Your computer should have **Python 2.7** installed. The programs can be executed
 
          The default option is "no option": no data munging. We can simply run "run.sh"             
                                                                              
-         If <option> is not empty: capital letters are converted into lower cases, and empty lines are ignored. 
+         If <option> is not empty: capital letters are converted into lower cases, 
+                                   and empty lines are ignored. 
                                    Try: " run.sh 1 "                         
 
 When the option is not empty, the output files are named **ft1_\<option\>.txt** and 
